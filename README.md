@@ -35,52 +35,6 @@ Anypic requires Xcode 5 and iOS 7. The [tutorial](https://parse.com/tutorials/an
 
 3. Add your Facebook app id to `Info.plist` in the `FacebookAppID` key.
 
-## Web Setup 
-
-The main Anypic site is at Anypic-web/index.html. The site will show the last eight photos uploaded to your Anypic app by default. You can click any of these photos to display a bigger version.
 
 
-#### Parse JavaScript SDK
-
-Anypic.org is built on top of the [Parse JavaScript SDK](https://parse.com/docs/js_guide). The main JavaScript file is at `Anypic-web/js/anypic.js`.
-
-To get started, copy your app's id and JavaScript key into `anypic.js`:
-
-```javascript
-Parse.initialize("APPLICATION_ID", "JAVASCRIPT_KEY");
-```
-
-You'll notice that there is only one index.html, however Anypic's website displays different content for the homepage and for a single photo's landing page. This is accomplished using [Backbone.js](http://backbonejs.org/)'s `Backbone.Router`. The following lines set up the two routes:
-
-```javascript
-routes: {
-  "pic/:object_id": "getPic",
-  "*actions": "defaultRoute"
-}
-``` 
-
-Whenever `/#pic/<object_id>` is visited, the Router will call the `getPic` function and pass along the object id for the photo that should be presented. The `getPic` function loads the photo landing page into the DOM, then obtains the photo from Parse using `Parse.Query`.
-
-Any other URL will call the defaultRoute function, which should load the homepage into the DOM.
-
-#### CSS
-
-Anypic uses [Sass](http://sass-lang.com/) and [Compass](http://compass-style.org/) to generate its CSS. You will find the main SCSS file at `sass/screen.scss`. To get started, run `compass watch` from the Anypic-web folder.
-
-Any changes made to the `.scss` files in `sass/` will be picked up by Compass and used to generate the final CSS files at `stylesheets/`.
-
-Anypic uses media queries to present different layouts on iPad, iOS and various desktop resolutions. These media queries will apply different CSS properties, as defined by `_320.scss`, `_480.scss`, `_768.scss`, `_1024.scss`, and `_1024.scss` depending on the device's horizontal resolution. You can modify these in `sass/screen.scss`. The following media query applies the CSS rules laid out in `_320.scss` when your website is visited from an iPhone, for example:
-
-```sass
-@media only screen and (max-width : 320px) { @import "320" }
-```
-
-## Cloud Code
-
-Add your Parse app id and master key to `Anypic-iOS/CloudCode/config/global.json`, then type `parse deploy` from the command line at `Anypic-cloud`. See the [Cloud Code Guide](https://parse.com/docs/cloud_code_guide#clt) for more information about the `parse` CLI.
-
-anyPicParse141
-
-
-anyPic Tutorial with parse 1.4.1
-
+[Orginal anyPic tutorial](https://parse.com/tutorials/anypic)
