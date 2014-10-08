@@ -1,6 +1,6 @@
 # To reproduce NSInternalInconsistencyException 'attempt to delete row 10 from section 0 which only contains 1 rows before the update'
 
-Follow all ios setup and run the project publish more than 10 photo with your demo. After all of publishing 'load more' button is throwing the exception.
+Follow all ios setup and run the project. Also Publish more than 10 photo with your demo. After all of publishing 'load more' button is throwing the exception.
 
 [parse \[PFQueryTableViewController loadNextPage\] bug report link](https://developers.facebook.com/bugs/821437467878353)
 
