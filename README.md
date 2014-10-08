@@ -72,3 +72,9 @@ Anypic uses media queries to present different layouts on iPad, iOS and various 
 ## Cloud Code
 
 Add your Parse app id and master key to `Anypic-iOS/CloudCode/config/global.json`, then type `parse deploy` from the command line at `Anypic-cloud`. See the [Cloud Code Guide](https://parse.com/docs/cloud_code_guide#clt) for more information about the `parse` CLI.
+
+anyPicParse141
+
+
+anyPic Tutorial with parse 1.4.1
+
